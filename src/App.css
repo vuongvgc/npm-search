@@ -152,3 +152,58 @@ body {
 .button__box-border {
     border: 1px solid #cccccc;
 }
+
+/* Search Result */
+.result__box {
+    background-color: #F9F9F9;
+    padding: 0 3.2rem ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.result-status {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    font-weight: 600;
+    margin: 1.6rem 0;
+    padding: 1.2rem;
+}
+
+.result-list__box {
+    padding: 2rem 0;
+    margin: 0 2rem;
+}
+/* LEFT */
+.result-list__left  {
+    font-weight: 600;
+    padding: 0 2rem;
+
+}
+.result-list__left h3 {
+    font-weight: 600;
+    margin: 4px 8px 0;
+}
+.result-list__left ul {
+    list-style-type: none;
+}
+.result-list__left li {
+    transition: all .2s;
+}
+.result-list__left li:hover {
+    font-weight: 900;
+}
+/* RIGHT */
+.result-list__right  {
+    font-weight: 600;
+    padding: 0 3rem;
+
+}
+
+/* FOOTER */
+.footer__box {
+    justify-content: space-around;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 0.5px solid #E5E5E5 ;
+}

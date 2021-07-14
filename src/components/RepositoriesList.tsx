@@ -1,38 +1,49 @@
-import { useState } from "react";
 import { useTypedSelector } from "../hooks/useTypedSelector";
-// import { useSelector } from 'react-redux';
-// import { useDispatch } from 'react-redux';
-// import { actionCreators } from '../states';
-import { useActions } from "../hooks/useActions";
+import PaginationResult from "./PaginationResult";
+import SortItem from "./SortItem";
 const RepositoriesList: React.FC = () => {
-  const [term, setTerm] = useState("");
-  // const dispatch = useDispatch();
-  const { searchRepositories } = useActions();
-  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    // dispatch(actionCreators.searchRepositories(term))
-    searchRepositories(term);
-  };
   const { loading, data, error } = useTypedSelector(
     (state) => state.repositories
   );
   return (
-    <div>
-      <h2>Search For A Package</h2>
-      <form onSubmit={onSubmit}>
-        <input value={term} onChange={(e) => setTerm(e.target.value)} />
-        <button>Search</button>
-      </form>
-      <div>
-        {error && <h3>{error}</h3>}
-        {loading && <h3>Loading....</h3>}
-        {!error &&
-          !loading &&
-          data.map((item: any) => {
-            return <p key={item}>{item}</p>;
-          })}
+    <section className="search-result__box">
+      <div className="result__box">
+        <div>
+          <p className="result-status">165853 packages found</p>
+        </div>
+        <div>
+          <PaginationResult />
+        </div>
       </div>
-    </div>
+      <div className="result-list__box row">
+        <div className="result-list__left col-2">
+          <h3>Sort Package</h3>
+          <ul>
+            <li>
+              <SortItem name="Optimal" color="#BBBBBB" />
+            </li>
+            <li>
+              <SortItem name="Popularity" color="#29ABE2" />
+            </li>
+            <li>
+              <SortItem name="Quality" color="#8956FF" />
+            </li>
+            <li>
+              <SortItem name="Maintenance" color="#CB3837" />
+            </li>
+          </ul>
+        </div>
+        <div className="result-list__right col-8">
+          {error && <h3>{error}</h3>}
+          {loading && <h3>Loading....</h3>}
+          {!error &&
+            !loading &&
+            data.map((item: any) => {
+              return <p key={item}>{item}</p>;
+            })}
+        </div>
+      </div>
+    </section>
   );
 };
 export default RepositoriesList;
