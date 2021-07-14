@@ -1,12 +1,12 @@
 import { Provider } from "react-redux";
 import { store } from "./states";
-import RepositoriesList from "./components/RepositoriesList";
-
+import SearchPage from "./Page/SearchPage";
+import "./App.css";
 const App = () => {
-    return (
-        <Provider store={store}>
-            <RepositoriesList />
-        </Provider>
-    )
-}
-export default App
+  return (
+    <Provider store={store}>
+      <SearchPage />
+    </Provider>
+  );
+};
+export default App;
