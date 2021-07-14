@@ -1,4 +1,5 @@
 /* SETUP BASE */
+@import '~antd/dist/antd.css';
 *, *::after, *::before {
     margin: 0;
     padding: 0;
@@ -12,5 +13,50 @@ html {
 body {
     font-family: 'Source Sans Pro', sans-serif;
     box-sizing: border-box;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #000000;
 }
 
+.header__container {
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    font-weight: 500;
+    line-height: 1.8rem;
+    letter-spacing: 0.21px;
+    padding: 0 3.2rem;
+    justify-content: space-between;
+    border-bottom: 0.5px solid #E5E5E5;
+}
+.header__border {
+    padding: 8px 0 0 0;
+    border-width: 10px 0 0;
+    border-top-style: solid;
+    border-image: linear-gradient(
+139deg
+, #fb8817, #ff4b01, #c12127, #e02aff) 3;
+}
+.header__icon {
+    padding: 1rem;
+  
+}
+.header__icon i {
+    margin-right: 1.6rem;
+}
+.nav-bar__list {
+    justify-content: space-around;
+    list-style-type: none;
+}
+.nav-link {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    padding: 1rem;
+    transition: All .5s;
+}
+.nav-link:hover {
+    color: #808080;
+}
+.row {
+    display: flex;
+}
