@@ -1,6 +1,7 @@
 import RepositoriesScope from "./RepositoriesScope";
 import { Avatar, Image } from "antd";
 import { Tag } from "antd";
+import { calcMonth } from "../utils/CalculatorMonth";
 interface typeProps {
   name: string;
   description: string;
@@ -8,7 +9,7 @@ interface typeProps {
   link: string;
   publisher: string;
   version: number;
-  date: Date;
+  date: string;
   quality: number;
   popularity: number;
   maintenance: number;
@@ -61,7 +62,7 @@ export const RepositoriesItem: React.FC<typeProps> = ({
           </div>
           <h3>{publisher}</h3>
           <p className="Repositories__content">
-            published {version} • 4 months ago- {date}
+            published {version} • {calcMonth(date)} months ago
           </p>
         </div>
       </div>
