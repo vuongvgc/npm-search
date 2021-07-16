@@ -66,7 +66,7 @@ export const RepositoriesItem: React.FC<typeProps> = ({
           </p>
         </div>
       </div>
-      <div className="RepositoriesItem__left">
+      <div className="RepositoriesItem__left col-1">
         <RepositoriesScope name="p" color="#29ABE2" scope={popularity} />
         <RepositoriesScope name="q" color="#8956FF" scope={quality} />
         <RepositoriesScope name="m" color="#CB3837" scope={maintenance} />

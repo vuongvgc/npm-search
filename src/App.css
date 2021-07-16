@@ -254,6 +254,11 @@ body {
 .copyright a i {
     margin: 0 3px;
 }
+.social__box {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;    
+}
 /* Repositories List */
 .RepositoriesItem__box {
     justify-content: space-between;
@@ -297,7 +302,13 @@ body {
 /*RES LIST LEFT */
 .RepositoriesItem__left {
     font-size: 1rem;
+    text-align: left;
 }
 .scope__box {
     align-items: baseline;
+}
+.loading__box {
+    display: flex;
+    justify-content: center;
+    padding: 4rem
 }

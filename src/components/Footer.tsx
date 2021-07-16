@@ -1,4 +1,5 @@
 import FooterItem from "./FooterItem";
+import CopyRight from "./Copyright";
 const navListSupport = [
   { name: "Help", link: "https://docs.npmjs.com/" },
   { name: "Community", link: "https://docs.npmjs.com/" },
@@ -44,21 +45,7 @@ const Footer: React.FC = () => {
             />
           </div>
         </div>
-        <div className="copyright row">
-          <p>
-            Copyright © 2021{" "}
-            <a
-              className="nav-link"
-              href="https://portfolio-app-vuong.vercel.app/"
-            >
-              <span>
-                <i className="fa fa-user-tie"></i>
-              </span>
-              Do Minh Vuong
-            </a>
-            . All Rights Reserved
-          </p>
-        </div>
+        <CopyRight />
       </footer>
       <div className="header__border"></div>
     </>
