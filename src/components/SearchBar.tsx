@@ -9,8 +9,8 @@ const SearchBar: React.FC = () => {
   };
   return (
     <section className="row search-bar__box">
-      <div className="col-1 logo__box">
-        <img src="./img/npm.png" alt="NPM LOGO" />
+      <div className="footer-icon__item">
+        <i className="fab fa-npm"></i>
       </div>
       <div className="col-7">
         <form className="col-10 row search-form" onSubmit={onSubmit}>
